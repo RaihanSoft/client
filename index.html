@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$TUNA Airdrop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for background rays and coin animations */
+        body {
+            background-color: #0a0a1a; /* Dark background color */
+            min-height: 100vh; /* Ensure body covers full viewport height */
+        }
+        .bg-gradient-overlay {
+            background: radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.15) 0%, transparent 70%),
+                        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+        }
+        .coin-left {
+            animation: float 6s ease-in-out infinite;
+        }
+        .coin-right {
+            animation: float 6s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .bg-blur-sm {
+            backdrop-filter: blur(4px);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="relative flex flex-col items-center overflow-hidden bg-gradient-overlay">
+        <!-- Navbar -->
+
+
+ 
+            <!-- Navbar -->
+      <nav
+        class="fixed top-0 z-20 w-full bg-gray-900 bg-opacity-70 bg-blur-sm pt-4 px-4 "
+      >
+        <div class="container mx-auto flex justify-between items-center">
+          <div class="flex items-center space-x-4">
+            <a href="#" class="flex items-center text-xl font-bold">
+              <img src="./WhatsApp_Image_2025-09-01_at_00.09.04_237156e0-removebg-preview.png"  alt="DefiTuna Logo" class="h-8 mr-2" />
+              DefiTuna
+            </a>
+            <div class="h-6 w-px bg-gray-700 hidden md:block"></div>
+            <div class="hidden md:flex space-x-6">
+              <a href="#" class="text-gray-300 hover:text-[#500380]">Markets</a>
+              <a href="#" class="text-gray-300 hover:text-[#500380]">Trade</a>
+              <a href="#" class="text-gray-300 hover:text-[#500380]"
+                >Provide Liquidity</a
+              >
+              <a href="#" class="text-gray-300 hover:text-[#500380]">Lend</a>
+              <a href="#" class="text-gray-300 hover:text-[#500380]">Docs</a>
+            </div>
+            <div class="hidden md:block">
+              <button
+                class="p-0.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"
+              >
+                <span class="block bg-black text-white px-4 py-1 rounded-full"
+                  >Stake $TUNA</span
+                >
+              </button>
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-4">
+            
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white">
+  <svg class="icon20 icon-primary text-slate-300 fill-current" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" data-group="true" data-sentry-element="svg" data-sentry-component="SupportIcon" data-sentry-source-file="SupportIcon.tsx"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.5C9.72391 1.5 11.3774 2.18466 12.5964 3.40365C13.8153 4.62263 14.5 6.27609 14.5 8C14.5 8.06674 14.4985 8.13336 14.4964 8.19987C14.4954 8.23266 14.494 8.26542 14.4925 8.29818C14.4911 8.32827 14.4894 8.35831 14.4876 8.38835C14.4866 8.40593 14.4856 8.42351 14.4844 8.44108C14.3782 10.0039 13.7109 11.4818 12.5964 12.5964C11.3774 13.8153 9.72391 14.5 8 14.5C7.72386 14.5 7.5 14.2761 7.5 14C7.5 13.7239 7.72386 13.5 8 13.5C9.45869 13.5 10.8575 12.9204 11.889 11.889C12.174 11.604 12.4241 11.2907 12.6374 10.9561L12.1393 10.8685C11.7559 10.8009 11.4137 10.5867 11.1852 10.2715C10.9568 9.95625 10.8597 9.56443 10.9147 9.17904L11.1126 7.79395C11.1411 7.59491 11.2093 7.40362 11.3132 7.23145C11.417 7.05926 11.5546 6.90967 11.7174 6.79167C11.8802 6.67371 12.0652 6.58971 12.2611 6.5446C12.457 6.4995 12.6601 6.49406 12.8581 6.52897L13.321 6.61035C13.076 5.67279 12.5859 4.80795 11.889 4.111C10.8575 3.07955 9.45869 2.5 8 2.5C6.54131 2.5 5.14245 3.07955 4.111 4.111C3.41403 4.80797 2.92363 5.67276 2.67871 6.61035L3.14193 6.52897C3.33997 6.49405 3.54329 6.49947 3.73926 6.5446C3.93516 6.58973 4.1201 6.67369 4.28288 6.79167C4.44566 6.90967 4.583 7.05928 4.68685 7.23145C4.79069 7.40361 4.85892 7.59491 4.88737 7.79395L5.08529 9.17904C5.14033 9.56445 5.04325 9.95625 4.81478 10.2715C4.58631 10.5867 4.24437 10.8009 3.861 10.8685L3.20345 10.9844L3.20182 10.9847C2.93078 11.0315 2.65175 10.9816 2.41374 10.8438C2.17575 10.7059 1.99366 10.4888 1.89941 10.2305L1.89974 10.2301C1.65219 9.56087 1.51757 8.85534 1.50163 8.14258L1.5 8C1.5 6.27609 2.18466 4.62263 3.40365 3.40365C4.62263 2.18466 6.27609 1.5 8 1.5ZM3.51465 7.51888C3.44937 7.50386 3.38172 7.50205 3.31576 7.51367L2.51107 7.65527C2.50388 7.76971 2.5 7.88466 2.5 8L2.5013 8.12044C2.51474 8.72307 2.62837 9.31963 2.83789 9.88542L2.83887 9.8877C2.85281 9.92589 2.87985 9.95813 2.91504 9.97852C2.95022 9.99887 2.99153 10.0063 3.03158 9.99935L3.68717 9.88379C3.81493 9.86126 3.92904 9.78991 4.00521 9.6849C4.08136 9.57983 4.11371 9.44909 4.09538 9.32064L3.89746 7.93555C3.88799 7.86924 3.8653 7.80541 3.83073 7.74805C3.79611 7.69065 3.75023 7.64057 3.69596 7.60124C3.6417 7.56191 3.57996 7.53392 3.51465 7.51888ZM12.6846 7.51367C12.6186 7.50204 12.5506 7.50387 12.4854 7.51888C12.4201 7.53392 12.3583 7.56194 12.304 7.60124C12.2498 7.64056 12.2042 7.69068 12.1696 7.74805C12.135 7.80544 12.112 7.8692 12.1025 7.93555L11.9046 9.32064C11.8863 9.44909 11.9186 9.57983 11.9948 9.6849C12.0709 9.78988 12.1851 9.86125 12.3128 9.88379L12.9684 9.99935C13.0085 10.0062 13.0501 9.99888 13.0853 9.97852C13.1204 9.95812 13.1472 9.92584 13.1611 9.8877L13.1621 9.88542C13.3716 9.31962 13.4849 8.72308 13.4984 8.12044L13.5 8C13.5 7.88465 13.4958 7.76972 13.4886 7.65527L12.6846 7.51367Z" fill="" data-sentry-element="path" data-sentry-source-file="SupportIcon.tsx"></path><path d="M7.99935 9.66764C8.06605 9.663 8.13301 9.6729 8.19564 9.69629C8.25826 9.71969 8.31532 9.75616 8.36263 9.80339C8.40996 9.85065 8.44655 9.90775 8.47005 9.97038C8.49353 10.033 8.50358 10.1 8.49902 10.1667C8.49913 10.2654 8.46982 10.3621 8.41504 10.4443C8.36024 10.5265 8.28229 10.5907 8.19108 10.6286C8.09983 10.6665 7.99927 10.6764 7.90234 10.6572C7.80544 10.638 7.71638 10.5903 7.64648 10.5205C7.57663 10.4507 7.5291 10.3618 7.50977 10.265C7.49044 10.1681 7.5003 10.0675 7.53809 9.97624C7.57587 9.88495 7.63986 9.80686 7.72201 9.75195C7.80412 9.69709 7.90059 9.66766 7.99935 9.66764Z" fill="" data-sentry-element="path" data-sentry-source-file="SupportIcon.tsx"></path><path d="M8 5.16667C8.37395 5.16667 8.75407 5.28005 9.0459 5.54883C9.34446 5.82384 9.5 6.21515 9.5 6.66667C9.5 7.2976 9.08448 7.69392 8.86979 7.92969C8.63028 8.19271 8.5 8.36862 8.5 8.66667C8.5 8.94281 8.27614 9.16667 8 9.16667C7.72386 9.16667 7.5 8.94281 7.5 8.66667C7.5 7.96481 7.86972 7.54258 8.13021 7.25651C8.41553 6.94317 8.5 6.83933 8.5 6.66667C8.5 6.45159 8.43178 6.34284 8.36849 6.28451C8.29845 6.21999 8.17852 6.16667 8 6.16667C7.71289 6.16667 7.5 6.36847 7.5 6.66667C7.5 6.94281 7.27614 7.16667 7 7.16667C6.72386 7.16667 6.5 6.94281 6.5 6.66667C6.5 5.79493 7.18211 5.16667 8 5.16667Z" fill="" data-sentry-element="path" data-sentry-source-file="SupportIcon.tsx"></path></svg>
+              </a>
+              <a href="#" class="text-gray-300 hover:text-white">
+          <svg class="icon-slate-300 icon-hover-rotate-90 icon20 fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-sentry-element="svg" data-sentry-component="GearIcon" data-sentry-source-file="GearIcon.tsx"><path d="M18.912 9.66667L14.7417 2.33334C14.6838 2.2316 14.6005 2.14719 14.5002 2.08866C14.3998 2.03012 14.286 1.99954 14.1703 2.00001H5.82968C5.71395 1.99954 5.60016 2.03012 5.49983 2.08866C5.39949 2.14719 5.31617 2.2316 5.25831 2.33334L1.08799 9.66667C1.03035 9.76801 1 9.88298 1 10C1 10.117 1.03035 10.232 1.08799 10.3333L5.25831 17.6667C5.31617 17.7684 5.39949 17.8528 5.49983 17.9113C5.60016 17.9699 5.71395 18.0005 5.82968 18H14.1703C14.286 18.0005 14.3998 17.9699 14.5002 17.9113C14.6005 17.8528 14.6838 17.7684 14.7417 17.6667L18.912 10.3333C18.9697 10.232 19 10.117 19 10C19 9.88298 18.9697 9.76801 18.912 9.66667ZM13.7894 16.6667H6.21059L2.41461 10L6.21059 3.33334H13.7894L17.5854 10L13.7894 16.6667Z" fill="" data-sentry-element="path" data-sentry-source-file="GearIcon.tsx"></path><path d="M10 6C9.20888 6 8.43552 6.2346 7.77772 6.67412C7.11992 7.11365 6.60723 7.73836 6.30448 8.46927C6.00173 9.20017 5.92252 10.0044 6.07686 10.7804C6.2312 11.5563 6.61216 12.269 7.17157 12.8284C7.73098 13.3878 8.44372 13.7688 9.21964 13.9231C9.99556 14.0775 10.7998 13.9983 11.5307 13.6955C12.2616 13.3928 12.8864 12.8801 13.3259 12.2223C13.7654 11.5645 14 10.7911 14 10C14 8.93913 13.5786 7.92172 12.8284 7.17157C12.0783 6.42143 11.0609 6 10 6ZM10 12.4C9.52533 12.4 9.06131 12.2592 8.66663 11.9955C8.27195 11.7318 7.96434 11.357 7.78269 10.9184C7.60104 10.4799 7.55351 9.99734 7.64612 9.53178C7.73872 9.06623 7.9673 8.63859 8.30294 8.30294C8.63859 7.9673 9.06623 7.73872 9.53178 7.64611C9.99734 7.55351 10.4799 7.60104 10.9184 7.78269C11.357 7.96434 11.7318 8.27195 11.9955 8.66663C12.2592 9.06131 12.4 9.52532 12.4 10C12.4 10.6365 12.1471 11.247 11.6971 11.6971C11.247 12.1471 10.6365 12.4 10 12.4Z" fill="" data-sentry-element="path" data-sentry-source-file="GearIcon.tsx"></path></svg>
+              </a>
+              <button
+                class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py- px-4 rounded-full transition duration-300"
+              >
+                No wallets
+              </button>
+            </div>
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-button"
+              class="text-white focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden hidden flex flex-col space-y-2 px-4 pt-2 pb-4"
+        >
+          <a href="#" class="block text-gray-300 hover:text-white">Markets</a>
+          <a href="#" class="block text-gray-300 hover:text-white">Trade</a>
+          <a href="#" class="block text-gray-300 hover:text-white"
+            >Provide Liquidity</a
+          >
+          <a href="#" class="block text-gray-300 hover:text-white">Lend</a>
+          <a href="#" class="block text-gray-300 hover:text-white">Docs</a>
+          <button
+            class="p-0.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 mt-2"
+          >
+            <span class="block bg-black text-white px-4 py-2 rounded-full"
+              >Stake $TUNA</span
+            >
+          </button>
+          <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="text-gray-300 hover:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8.228 9.247a.75.75 0 01.968-.024L12 11.171l2.804-1.948a.75.75 0 01.968.024l2.51 1.742a.75.75 0 010 1.25l-2.51 1.742a.75.75 0 01-.968.024L12 12.829l-2.804 1.948a.75.75 0 01-.968-.024l-2.51-1.742a.75.75 0 010-1.25l2.51-1.742z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                />
+              </svg>
+            </a>
+          </div>
+          <button
+            class=" bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 mt-2"
+          >
+            No wallets
+          </button>
+        </div>
+      </nav>
+        
+
+
+ 
+
+        <!-- Hero Section -->
+        <main class="relative z-10 flex flex-col items-center justify-center text-center px-4 py-16 md:py-24 lg:py-32">
+       <img src="./token-l-opt-640-removebg-preview.png" 
+     alt="TUNA Coin"
+     class="absolute -translate-y-1/2 w-24 h-24 md:w-48 md:h-48 lg:w-64 lg:h-64 opacity-70 hidden md:block coin-left" 
+     style="left: -180px;">
+
+<img src="./token-r-opt-384-removebg-preview.png" 
+     alt="TUNA Coin"
+     class="absolute -translate-y-1/2  w-24 h-24 md:w-48 md:h-48 lg:w-64 lg:h-64 opacity-70 hidden md:block coin-right" 
+     style="right: -180px;">
+
+
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-purple-400 mb-4 relative z-10">
+                $TUNA Airdrop
+            </h1>
+            <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-white max-w-4xl mb-8 relative z-10">
+                In preparation for our TGE event,
+                <br>we have put together an airdrop checker.
+            </p>
+            <p class="text-base md:text-lg text-gray-300 max-w-3xl relative z-10">
+                DefiTuna has taken a unique approach, the snapshot was taken in stealth, as we didn't want
+                to dilute any of our early supporters — the backbone of our product — <span class="font-bold text-white">YOU!</span>
+            </p>
+        </main>
+
+        
+<section class="flex items-center justify-center w-full ">
+  <div class="bg-gradient-to-b from-[#101826] to-[#0b111d] p-16 rounded-3xl shadow-lg w-full max-w-4xl text-center border border-[#1c2230]">
+    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">
+      Please type in your wallet in order<br>
+      to check your airdrop eligibility:
+    </h2>
+
+    <!-- Wallet Input -->
+    <input 
+      type="text" 
+      placeholder="Your Wallet ID" 
+      class="w-full px-4 py-3 mb-6 rounded-lg bg-[#0e1522] text-gray-200 placeholder-gray-400 border border-[#1f2735] focus:outline-none focus:ring-2 focus:ring-purple-500"
+    />
+
+    <!-- Buttons Row -->
+    <div class="flex items-center justify-between gap-4">
+      <button 
+        class="flex-1 bg-purple-700 hover:bg-purple-800 text-gray-200 font-medium py-3 rounded-full transition">
+        Check Now
+      </button>
+
+      <button 
+        class="flex items-center gap-2 px-5 py-3 bg-[#131a28] hover:bg-[#1a2235] text-gray-200 rounded-full transition border border-[#2a3142]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c.828 0 1.5.672 1.5 1.5S12.828 11 12 11s-1.5-.672-1.5-1.5S11.172 8 12 8zM12 14c1.657 0 3.75.843 3.75 2.25V18H8.25v-1.75C8.25 14.843 10.343 14 12 14z" />
+        </svg>
+        Tokenomics
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="flex flex-col items-center justify-center px-6 py-20 text-center">
+  <!-- Icon -->
+  <div class="mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" viewBox="0 0 120 96" class="h-[4.5rem] w-[5.625rem] text-slate-50 640:h-[6 rem] 640:w-[7.5rem]" data-sentry-element="svg" data-sentry-source-file="page.tsx" data-sentry-component="Fusion Logo"></svg>
+    </svg>
+  </div>
+
+  <!-- Title -->
+  <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+    New AMM
+  </h2>
+  <p class="text-xl md:text-2xl font-semibold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-12">
+    Coming soon to DeFiTuna!
+  </p>
+
+  <!-- Features Grid -->
+  <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full border-y border-gray-800 py-8">
+    <!-- Feature 1 -->
+    <div class="pr-0 md:pr-8 text-start">
+      <h3 class="text-lg font-bold text-white mb-2">10% more profitable for liquidity Providers</h3>
+      <p class="text-gray-400">Execution built for maximum maker profit.</p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="md:border-l border-gray-800 pl-0 md:pl-8  text-start">
+      <h3 class="text-lg font-bold text-white mb-2">Deepest on-chain AMM liquidity</h3>
+      <p class="text-gray-400">Access top prices with limit orders and unmatched depth on every trade.</p>
+    </div>
+  </div>
+
+  <!-- Lightweight Code -->
+  <div class="max-w-1/2  w-full text-start py-8 border-b border-gray-800">
+    <h3 class="text-lg font-bold text-white mb-2">Lightweight code</h3>
+    <p class="text-gray-400 w-1/2 ">Deep liquidity is powered by FusionAMM's lightweight architecture, fully accessible via our open SDK.</p>
+  </div>
+
+  <!-- Icons Row -->
+  <div class="flex items-center justify-center gap-10 mt-8 text-gray-400">
+    <div class="flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2" />
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7 12h12l-3-3m0 6l3-3" />
+      </svg>
+      <span>Wallets</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <span>Web sites</span>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+        <circle cx="12" cy="12" r="9" stroke-width="2" />
+      </svg>
+      <span>Arbitrage bots</span>
+    </div>
+
+    <div class="flex items-center gap-2 ">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+      </svg>
+      <span>Aggregators</span>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-gray-400 py-10">
+  <div class="container mx-auto flex flex-col items-center space-y-6">
+    
+    <!-- Social Icons -->
+    <div class="flex space-x-8 text-3xl">
+      <!-- X (Twitter) -->
+<a target="_blank" href="https://x.com/defituna"><svg class="icon32 640:icon40 icon-primary fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-sentry-element="svg" data-sentry-component="TwitterIcon" data-sentry-source-file="TwitterIcon.tsx"><path d="M15.2706 1.58643H18.0818L11.9401 8.606L19.1654 18.1581H13.5081L9.07706 12.3648L4.00699 18.1581H1.19406L7.76323 10.6498L0.832031 1.58643H6.63296L10.6382 6.8817L15.2706 1.58643ZM14.284 16.4754H15.8417L5.78653 3.1807H4.11492L14.284 16.4754Z" fill="" data-sentry-element="path" data-sentry-source-file="TwitterIcon.tsx"></path></svg></a>
+      <!-- Discord -->
+<a target="_blank" href="https://discord.gg/vNWwVWbnzs"><svg class="icon32 640:icon40 icon-primary fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-sentry-element="svg" data-sentry-component="DiscordIcon" data-sentry-source-file="DiscordIcon.tsx"><path d="M16.9308 3.4629C15.6561 2.87799 14.2892 2.44707 12.8599 2.20025C12.8339 2.19549 12.8079 2.20739 12.7945 2.2312C12.6187 2.54388 12.4239 2.9518 12.2876 3.27242C10.7503 3.04228 9.22099 3.04228 7.71527 3.27242C7.57887 2.94467 7.37707 2.54388 7.20048 2.2312C7.18707 2.20819 7.16107 2.19629 7.13504 2.20025C5.70659 2.44628 4.33963 2.87721 3.06411 3.4629C3.05307 3.46766 3.04361 3.4756 3.03732 3.48591C0.444493 7.35954 -0.265792 11.138 0.0826501 14.8695C0.0842267 14.8878 0.0944749 14.9053 0.108665 14.9164C1.81934 16.1726 3.47642 16.9353 5.10273 17.4408C5.12876 17.4488 5.15634 17.4393 5.1729 17.4178C5.55761 16.8925 5.90054 16.3385 6.19456 15.756C6.21192 15.7219 6.19535 15.6814 6.15989 15.6679C5.61594 15.4616 5.098 15.21 4.59977 14.9243C4.56037 14.9013 4.55721 14.8449 4.59347 14.8179C4.69831 14.7394 4.80318 14.6576 4.9033 14.5751C4.92141 14.56 4.94665 14.5568 4.96794 14.5664C8.24107 16.0608 11.7846 16.0608 15.0191 14.5664C15.0404 14.5561 15.0657 14.5592 15.0846 14.5743C15.1847 14.6568 15.2895 14.7394 15.3952 14.8179C15.4314 14.8449 15.4291 14.9013 15.3897 14.9243C14.8914 15.2155 14.3735 15.4616 13.8288 15.6671C13.7933 15.6806 13.7775 15.7219 13.7949 15.756C14.0952 16.3377 14.4381 16.8917 14.8157 17.417C14.8315 17.4393 14.8599 17.4488 14.8859 17.4408C16.5201 16.9353 18.1772 16.1726 19.8879 14.9164C19.9028 14.9053 19.9123 14.8886 19.9139 14.8703C20.3309 10.5562 19.2154 6.80878 16.9568 3.4867C16.9513 3.4756 16.9419 3.46766 16.9308 3.4629ZM6.68335 12.5974C5.69792 12.5974 4.88594 11.6927 4.88594 10.5816C4.88594 9.47056 5.68217 8.56585 6.68335 8.56585C7.69239 8.56585 8.49651 9.4785 8.48073 10.5816C8.48073 11.6927 7.68451 12.5974 6.68335 12.5974ZM13.329 12.5974C12.3435 12.5974 11.5316 11.6927 11.5316 10.5816C11.5316 9.47056 12.3278 8.56585 13.329 8.56585C14.338 8.56585 15.1421 9.4785 15.1264 10.5816C15.1264 11.6927 14.338 12.5974 13.329 12.5974Z" fill="" data-sentry-element="path" data-sentry-source-file="DiscordIcon.tsx"></path></svg></a>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="flex flex-wrap justify-center space-x-6 text-sm">
+      <a href="#" class="hover:text-white">Docs</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Terms of use</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Disclaimer</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">FAQ</a>
+      <span>•</span>
+      <a href="#" class="hover:text-white">Legacy Version</a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-xs text-gray-500">
+      <p>All rights reserved by DeFi Tuna.</p>
+      <p>Copyright ©2025</p>
+      <p>Version: 2.5.4</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+        
+
+        <script>
+            document.getElementById('mobile-menu-button').onclick = function() {
+                document.getElementById('mobile-menu').classList.toggle('hidden');
+            };
+        </script>
+    </div>
+</body>
+</html>
