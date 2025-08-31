@@ -61,7 +61,7 @@
               <button
                 class="p-0.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"
               >
-                <span class="block bg-black text-white px-4 py-1 rounded-full"
+                <span class="block bg-black text-white hover:bg-purple-600 px-4 py-1 rounded-full"
                   >Stake $TUNA</span
                 >
               </button>
@@ -77,8 +77,8 @@
               <a href="#" class="text-gray-300 hover:text-white">
           <svg class="icon-slate-300 icon-hover-rotate-90 icon20 fill-current" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" data-sentry-element="svg" data-sentry-component="GearIcon" data-sentry-source-file="GearIcon.tsx"><path d="M18.912 9.66667L14.7417 2.33334C14.6838 2.2316 14.6005 2.14719 14.5002 2.08866C14.3998 2.03012 14.286 1.99954 14.1703 2.00001H5.82968C5.71395 1.99954 5.60016 2.03012 5.49983 2.08866C5.39949 2.14719 5.31617 2.2316 5.25831 2.33334L1.08799 9.66667C1.03035 9.76801 1 9.88298 1 10C1 10.117 1.03035 10.232 1.08799 10.3333L5.25831 17.6667C5.31617 17.7684 5.39949 17.8528 5.49983 17.9113C5.60016 17.9699 5.71395 18.0005 5.82968 18H14.1703C14.286 18.0005 14.3998 17.9699 14.5002 17.9113C14.6005 17.8528 14.6838 17.7684 14.7417 17.6667L18.912 10.3333C18.9697 10.232 19 10.117 19 10C19 9.88298 18.9697 9.76801 18.912 9.66667ZM13.7894 16.6667H6.21059L2.41461 10L6.21059 3.33334H13.7894L17.5854 10L13.7894 16.6667Z" fill="" data-sentry-element="path" data-sentry-source-file="GearIcon.tsx"></path><path d="M10 6C9.20888 6 8.43552 6.2346 7.77772 6.67412C7.11992 7.11365 6.60723 7.73836 6.30448 8.46927C6.00173 9.20017 5.92252 10.0044 6.07686 10.7804C6.2312 11.5563 6.61216 12.269 7.17157 12.8284C7.73098 13.3878 8.44372 13.7688 9.21964 13.9231C9.99556 14.0775 10.7998 13.9983 11.5307 13.6955C12.2616 13.3928 12.8864 12.8801 13.3259 12.2223C13.7654 11.5645 14 10.7911 14 10C14 8.93913 13.5786 7.92172 12.8284 7.17157C12.0783 6.42143 11.0609 6 10 6ZM10 12.4C9.52533 12.4 9.06131 12.2592 8.66663 11.9955C8.27195 11.7318 7.96434 11.357 7.78269 10.9184C7.60104 10.4799 7.55351 9.99734 7.64612 9.53178C7.73872 9.06623 7.9673 8.63859 8.30294 8.30294C8.63859 7.9673 9.06623 7.73872 9.53178 7.64611C9.99734 7.55351 10.4799 7.60104 10.9184 7.78269C11.357 7.96434 11.7318 8.27195 11.9955 8.66663C12.2592 9.06131 12.4 9.52532 12.4 10C12.4 10.6365 12.1471 11.247 11.6971 11.6971C11.247 12.1471 10.6365 12.4 10 12.4Z" fill="" data-sentry-element="path" data-sentry-source-file="GearIcon.tsx"></path></svg>
               </a>
-              <button
-                class="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py- px-4 rounded-full transition duration-300"
+              <button disabled
+                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-1 px-4 text-center opacity-55 rounded-full transition duration-300"
               >
                 No wallets
               </button>
@@ -160,7 +160,7 @@
             </a>
           </div>
           <button
-            class=" bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300 mt-2"
+            class=" bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-1 px-4 rounded-full transition duration-300 mt-2"
           >
             No wallets
           </button>
@@ -213,7 +213,7 @@
     />
 
     <!-- Buttons Row -->
-    <div class="flex items-center justify-between gap-4">
+    <div class="flex items-center justify-between gap-4 md:gap-6 ">
       <button 
         class="flex-1 bg-purple-700 hover:bg-purple-800 text-gray-200 font-medium py-3 rounded-full transition">
         Check Now
@@ -230,46 +230,58 @@
   </div>
 </section>
 
-
 <section class="flex flex-col items-center justify-center px-6 py-20 text-center">
   <!-- Icon -->
   <div class="mb-6">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" viewBox="0 0 120 96" class="h-[4.5rem] w-[5.625rem] text-slate-50 640:h-[6 rem] 640:w-[7.5rem]" data-sentry-element="svg" data-sentry-source-file="page.tsx" data-sentry-component="Fusion Logo"></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 120 96" class="h-16 w-20 sm:h-20 sm:w-24 text-slate-50">
+      <path d="M96.867 14.265c3.323-.123..." />
     </svg>
   </div>
 
   <!-- Title -->
-  <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">
+  <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
     New AMM
   </h2>
-  <p class="text-xl md:text-2xl font-semibold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-12">
+  <p class="text-lg sm:text-xl md:text-2xl font-semibold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent mb-8 md:mb-12">
     Coming soon to DeFiTuna!
   </p>
 
   <!-- Features Grid -->
-  <div class="grid md:grid-cols-2 gap-8 max-w-4xl w-full border-y border-gray-800 py-8">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl w-full border-y border-gray-800 py-6 md:py-8">
     <!-- Feature 1 -->
     <div class="pr-0 md:pr-8 text-start">
-      <h3 class="text-lg font-bold text-white mb-2">10% more profitable for liquidity Providers</h3>
-      <p class="text-gray-400">Execution built for maximum maker profit.</p>
+      <h3 class="text-base sm:text-lg font-bold text-white mb-2">
+        10% more profitable for liquidity Providers
+      </h3>
+      <p class="text-gray-400 text-sm sm:text-base">
+        Execution built for maximum maker profit.
+      </p>
     </div>
 
     <!-- Feature 2 -->
-    <div class="md:border-l border-gray-800 pl-0 md:pl-8  text-start">
-      <h3 class="text-lg font-bold text-white mb-2">Deepest on-chain AMM liquidity</h3>
-      <p class="text-gray-400">Access top prices with limit orders and unmatched depth on every trade.</p>
+    <div class="md:border-l border-gray-800 pl-0 md:pl-8 text-start">
+      <h3 class="text-base sm:text-lg font-bold text-white mb-2">
+        Deepest on-chain AMM liquidity
+      </h3>
+      <p class="text-gray-400 text-sm sm:text-base">
+        Access top prices with limit orders and unmatched depth on every trade.
+      </p>
     </div>
   </div>
 
   <!-- Lightweight Code -->
-  <div class="max-w-1/2  w-full text-start py-8 border-b border-gray-800">
-    <h3 class="text-lg font-bold text-white mb-2">Lightweight code</h3>
-    <p class="text-gray-400 w-1/2 ">Deep liquidity is powered by FusionAMM's lightweight architecture, fully accessible via our open SDK.</p>
+  <div class="w-full max-w-4xl text-start py-6 md:py-8 border-b border-gray-800">
+    <h3 class="text-base sm:text-lg font-bold text-white mb-2">
+      Lightweight code
+    </h3>
+    <p class="text-gray-400 text-sm sm:text-base md:w-2/3">
+      Deep liquidity is powered by FusionAMM's lightweight architecture, fully accessible via our open SDK.
+    </p>
   </div>
 
   <!-- Icons Row -->
-  <div class="flex items-center justify-center gap-10 mt-8 text-gray-400">
-    <div class="flex items-center gap-2">
+  <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 mt-6 md:mt-8 text-gray-400">
+    <div class="flex items-center gap-2 text-sm sm:text-base">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2" />
         <path stroke-linecap="round" stroke-linejoin="round" d="M7 12h12l-3-3m0 6l3-3" />
@@ -277,14 +289,14 @@
       <span>Wallets</span>
     </div>
 
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 text-sm sm:text-base">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
       <span>Web sites</span>
     </div>
 
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 text-sm sm:text-base">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
         <circle cx="12" cy="12" r="9" stroke-width="2" />
@@ -292,7 +304,7 @@
       <span>Arbitrage bots</span>
     </div>
 
-    <div class="flex items-center gap-2 ">
+    <div class="flex items-center gap-2 text-sm sm:text-base">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
       </svg>
