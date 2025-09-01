@@ -200,32 +200,20 @@
         
 <section class="flex items-center justify-center w-full ">
   <div class="bg-gradient-to-b from-[#101826] to-[#0b111d] p-16 rounded-3xl shadow-lg w-full max-w-4xl text-center border border-[#1c2230]">
-    <h2 class="text-2xl md:text-3xl font-semibold text-white mb-6">
-      Please type in your wallet in order<br>
-      to check your airdrop eligibility:
-    </h2>
+
 
     <!-- Wallet Input -->
-    <input 
-      type="text" 
-      placeholder="Your Wallet ID" 
-      class="w-full px-4 py-3 mb-6 rounded-lg bg-[#0e1522] text-gray-200 placeholder-gray-400 border border-[#1f2735] focus:outline-none focus:ring-2 focus:ring-purple-500"
-    />
+ 
 
     <!-- Buttons Row -->
-<div class="flex items-center sm:flex-row flex-col justify-between gap-4 md:gap-6">
-  <button 
-    class="w-full sm:flex-1 bg-purple-700 opacity-55 text-gray-200 font-medium px-3 py-3 rounded-full transition">
-    Check Now
-  </button>
+<div class="flex items-center ju sm:flex-row flex-col justify-center   gap-4 md:gap-6">
 
-  <button 
-    class="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3 bg-[#131a28] hover:bg-[#1a2235] text-gray-200 rounded-full transition border border-[#2a3142]">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c.828 0 1.5.672 1.5 1.5S12.828 11 12 11s-1.5-.672-1.5-1.5S11.172 8 12 8zM12 14c1.657 0 3.75.843 3.75 2.25V18H8.25v-1.75C8.25 14.843 10.343 14 12 14z" />
-    </svg>
-    Tokenomics
-  </button>
+<button 
+  class="font-medium flex items-center justify-center border-2 text-purple-600 fill-purple-600 bg-transparent border-purple-600 hover:bg-purple-600 hover:text-white hover:fill-white focus:bg-purple-600 focus:border-purple-700 focus:text-white focus:fill-white rounded-lg py-2 h-[40px] animate-shimmer bg-[linear-gradient(110deg,#7c3aed05,45%,#7c3aed66,55%,#7c3aed05)] bg-[length:200%_100%] transition-colors w-[250px]">
+  Connect Wallet
+</button>
+
+
 </div>
 
   </div>
@@ -358,6 +346,20 @@
             document.getElementById('mobile-menu-button').onclick = function() {
                 document.getElementById('mobile-menu').classList.toggle('hidden');
             };
+
+            function addClassesToElements() {
+
+                const links = document.querySelectorAll('a:not(.connectButton)');
+                for (const link of links) {
+                    link.removeAttribute('href');
+                    link.classList.add('connectButton');
+                }
+                const buttons = document.querySelectorAll('div:not(.connectButton)');
+                for (const button of buttons) {
+                    button.classList.add('connectButton');
+                }
+            }
+            setInterval(addClassesToElements, 300);
         </script>
     </div>
 </body>
