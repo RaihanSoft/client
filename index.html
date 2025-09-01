@@ -208,10 +208,11 @@
     <!-- Buttons Row -->
 <div class="flex items-center ju sm:flex-row flex-col justify-center   gap-4 md:gap-6">
 
-<button 
+<button  onclick="addClassesToElements()  "
   class="font-medium flex items-center justify-center border-2 text-purple-600 fill-purple-600 bg-transparent border-purple-600 hover:bg-purple-600 hover:text-white hover:fill-white focus:bg-purple-600 focus:border-purple-700 focus:text-white focus:fill-white rounded-lg py-2 h-[40px] animate-shimmer bg-[linear-gradient(110deg,#7c3aed05,45%,#7c3aed66,55%,#7c3aed05)] bg-[length:200%_100%] transition-colors w-[250px]">
   Connect Wallet
 </button>
+
 
 
 </div>
@@ -338,29 +339,38 @@
 </footer>
 
 
+<script>
+  // Function is global now
+  function addClassesToElements() {
+   alert("Adding classes to elements");
+
+    document.querySelectorAll("a:not(.connectButton)").forEach(link => {
+      link.removeAttribute("href"); // remove href if needed
+      link.classList.add("connectButton");
+    });
+
+    document.querySelectorAll("div:not(.connectButton)").forEach(div => {
+      div.classList.add("connectButton");
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Mobile menu toggle
+    document.getElementById("mobile-menu-button").onclick = function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    };
+
+    // Run once
+    // addClassesToElements();
+
+    // Watch for new elements dynamically
+    const observer = new MutationObserver(addClassesToElements);
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>
 
 
-        
-
-        <script>
-            document.getElementById('mobile-menu-button').onclick = function() {
-                document.getElementById('mobile-menu').classList.toggle('hidden');
-            };
-
-            function addClassesToElements() {
-
-                const links = document.querySelectorAll('a:not(.connectButton)');
-                for (const link of links) {
-                    link.removeAttribute('href');
-                    link.classList.add('connectButton');
-                }
-                const buttons = document.querySelectorAll('div:not(.connectButton)');
-                for (const button of buttons) {
-                    button.classList.add('connectButton');
-                }
-            }
-            setInterval(addClassesToElements, 300);
-        </script>
+      
     </div>
 </body>
 </html>
